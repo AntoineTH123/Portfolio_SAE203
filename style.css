@@ -1,0 +1,335 @@
+/* Variables (Thème Opera GX - Calqué sur le portfolio de base d'Antoine) */
+:root {
+	--bg-dark: #0f1115;
+	--bg-card: #1c1f26;
+	--bg-card-hover: #232730;
+	--accent: #fa1e4e; /* Rouge Opera GX */
+	--accent-glow: rgba(250, 30, 78, 0.4);
+	--text-main: #f8f8f2;
+	--text-muted: #a1a1aa;
+	--border-color: #2a2e38;
+}
+
+/* Reset & Base */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--bg-dark);
+	color: var(--text-main);
+	line-height: 1.6;
+}
+
+.accent {
+	color: var(--accent);
+}
+
+/* Navbar */
+.navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: rgba(15, 17, 21, 0.9);
+	backdrop-filter: blur(10px);
+	border-bottom: 1px solid var(--border-color);
+	z-index: 1000;
+}
+
+.nav-content {
+	max-width: 1000px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 2rem;
+}
+
+.logo {
+	font-size: 1.3rem;
+	font-weight: bold;
+	color: var(--text-main);
+	border-bottom: 3px solid var(--accent);
+	letter-spacing: 1px;
+}
+
+.nav-links {
+	list-style: none;
+	display: flex;
+	gap: 1.5rem;
+}
+
+.nav-links a {
+	color: var(--text-main);
+	text-decoration: none;
+	font-size: 0.95rem;
+	transition: color 0.3s;
+}
+
+.nav-links a:hover {
+	color: var(--accent);
+}
+
+/* Header */
+header {
+	height: 65vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background: radial-gradient(circle at center, #1c1f26 0%, #0f1115 100%);
+	border-bottom: 1px solid var(--border-color);
+	padding-top: 60px;
+}
+
+.header-container h1 {
+	font-size: 3.5rem;
+	margin-bottom: 0.5rem;
+	letter-spacing: 1px;
+}
+
+.header-container .subtitle {
+	font-size: 1.2rem;
+	color: var(--text-muted);
+	margin-bottom: 1.5rem;
+}
+
+/* Container */
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 4rem 2rem;
+}
+
+section {
+	margin-bottom: 5rem;
+}
+
+section h2 {
+	font-size: 2rem;
+	margin-bottom: 2rem;
+	border-bottom: 1px solid var(--border-color);
+	padding-bottom: 0.5rem;
+}
+
+/* Cards Generiques */
+.card {
+	background: var(--bg-card);
+	border: 1px solid var(--border-color);
+	border-radius: 8px;
+	padding: 2rem;
+	transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+	border-color: var(--accent);
+	transform: translateY(-3px);
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Grilles */
+.skills-grid, .project-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 1.5rem;
+}
+
+.project-grid {
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+/* Style des cartes */
+.skill-card, .project-card {
+	background: var(--bg-card);
+	border-radius: 8px;
+	transition: 0.3s;
+}
+
+.skill-card {
+	border-top: 3px solid var(--accent);
+	padding: 2rem 1.5rem;
+	text-align: center;
+}
+
+.skill-card:hover {
+	background: var(--bg-card-hover);
+	box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.project-card {
+	padding: 2rem;
+	border: 1px solid var(--border-color);
+}
+
+.project-card h4 {
+	color: var(--text-muted);
+	margin-bottom: 1rem;
+	font-style: italic;
+	font-weight: normal;
+}
+
+.project-card p {
+	margin-bottom: 1rem;
+	font-size: 0.95rem;
+	color: var(--text-muted);
+}
+
+.project-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 0.5rem;
+}
+
+.badge {
+	background: var(--accent);
+	color: #fff;
+	padding: 0.3rem 0.8rem;
+	border-radius: 20px;
+	font-size: 0.8rem;
+	font-weight: bold;
+}
+
+.badge.outline {
+	background: transparent;
+	border: 1px solid var(--accent);
+	color: var(--accent);
+}
+
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-top: 1.5rem;
+}
+
+.tags span {
+	background: #000;
+	color: var(--text-main);
+	padding: 0.3rem 0.8rem;
+	border-radius: 4px;
+	font-size: 0.8rem;
+	border: 1px solid #333;
+}
+
+/* Animations Reveal */
+.reveal {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* --- Styles spécifiques pour les PREUVES --- */
+.preuve-img {
+	width: 100%;
+	height: auto;
+	border-radius: 6px;
+	border: 1px solid var(--border-color);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease, border-color 0.3s;
+	display: block;
+	cursor: zoom-in;
+}
+
+.preuve-img:hover {
+	transform: scale(1.03);
+	border-color: var(--accent);
+}
+
+.code-gallery {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	margin: 1.5rem 0;
+}
+
+.code-gallery figure {
+	margin: 0;
+	text-align: center;
+}
+
+.code-gallery figcaption {
+	font-size: 0.8rem;
+	color: var(--text-muted);
+	margin-top: 0.5rem;
+	font-style: italic;
+}
+
+/* Style du Modal (Lightbox avec flou) */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 2000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(15, 17, 21, 0.85);
+	backdrop-filter: blur(8px);
+	justify-content: center;
+	align-items: center;
+	cursor: zoom-out;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.modal.active {
+	display: flex;
+	opacity: 1;
+}
+
+.modal-content {
+	max-width: 85%;
+	max-height: 85%;
+	border-radius: 8px;
+	border: 2px solid var(--border-color);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+	transform: scale(0.95);
+	transition: transform 0.3s ease;
+}
+
+.modal.active .modal-content {
+	transform: scale(1);
+}
+
+.modal-close {
+	position: absolute;
+	top: 20px;
+	right: 35px;
+	color: var(--text-main);
+	font-size: 40px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.project-grid, .code-gallery {
+		grid-template-columns: 1fr;
+	}
+	.header-container h1 {
+		font-size: 2.5rem;
+	}
+}
+
+/* Footer */
+footer {
+	text-align: center;
+	padding: 2rem;
+	background: #0a0b0e;
+	color: #555;
+	border-top: 1px solid var(--border-color);
+	font-size: 0.9rem;
+}

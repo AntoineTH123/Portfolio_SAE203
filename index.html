@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Antoine THOMANN | Portfolio Projet - SAÉ 2.03</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+
+<body>
+	<nav class="navbar">
+		<div class="nav-content">
+			<span class="logo">AT. <span class="accent">SAÉ 2.03</span></span>
+			<ul class="nav-links">
+				<li><a href="#contexte">Contexte</a></li>
+				<li><a href="#abstract">Abstract</a></li>
+				<li><a href="#contributions">Mes Tâches</a></li>
+				<li><a href="#reflexion">Réflexion</a></li>
+				<li><a href="#preuves">Preuves</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<header id="home">
+		<div class="header-container reveal">
+			<h1>Portfolio <span class="accent">SAÉ 2.03</span></h1>
+			<p class="subtitle">Gestionnaire d'Absences du Département | Antoine THOMANN</p>
+		</div>
+	</header>
+
+	<main class="container">
+		<section id="contexte" class="reveal">
+			<h2><span class="accent">#</span> Contexte du Projet</h2>
+			<div class="card">
+				<p>Dans le cadre de la <strong>SAÉ 2.03</strong>, notre groupe a dû créer un site web pour <strong>gérer les absences dans un département de l'IUT</strong>. Ce site est fait pour les secrétaires et les gestionnaires afin de remplacer les feuilles de papier et d'automatiser le suivi.</p>
+				
+				<h3 class="category-title" style="margin-top: 2rem;">Les données à gérer</h3>
+				<p>Le site utilise une base de données organisée avec 5 types d'informations :</p>
+				
+				<div class="schema-box" style="margin: 1.5rem 0; padding: 1.5rem; background: var(--bg-card-hover); border-left: 4px solid var(--accent); border-radius: 4px;">
+					<h4 style="margin-bottom: 1rem; color: var(--text-main);">Les tables de la base de données :</h4>
+					<ul style="list-style: none; padding-left: 0; color: var(--text-muted);">
+						<li style="margin-bottom: 0.5rem;"><strong class="accent">> Groupes d'étudiants :</strong> Identifiant, Nom (ex: RT1-A).</li>
+						<li style="margin-bottom: 0.5rem;"><strong class="accent">> Étudiants :</strong> Identifiant, Nom, Prénom, Email, Groupe, Photo.</li>
+						<li style="margin-bottom: 0.5rem;"><strong class="accent">> Enseignants :</strong> Identifiant, Nom, Prénom, Email.</li>
+						<li style="margin-bottom: 0.5rem;"><strong class="accent">> Cours :</strong> Identifiant, Titre du cours, Date, Enseignant, Durée, Groupe.</li>
+						<li style="margin-bottom: 0.5rem;"><strong class="accent">> Absences :</strong> Étudiant, Cours, Statut (Justifié ou non), Justificatif.</li>
+					</ul>
+				</div>
+
+				<p>Pour chaque type d'information, le site doit permettre d'<strong>ajouter, afficher, modifier et supprimer</strong> des données (ce qu'on appelle un CRUD). Les utilisateurs doivent aussi pouvoir ajouter des absences en chargeant un fichier CSV, ajouter des justificatifs en PDF, et voir une liste finale des absences par étudiant ou par cours.</p>
+			</div>
+		</section>
+
+		<section id="abstract" class="reveal">
+			<h2><span class="accent">#</span> Short Project Abstract</h2>
+			<div class="card" style="border: 1px dashed var(--accent);">
+				<p style="font-style: italic; color: var(--text-main); line-height: 1.7;">
+					"This portfolio presents my work for the SAÉ 2.03 project. Our goal was to create a web application to manage student absences in the university department. With this website, administrators can easily add, see, modify, or delete information about students, teachers, groups, and courses. Users can also upload CSV files to add many absences at the same time, and upload PDF files for justifications. In my team, my main tasks were to create the visual interface of the website using HTML and CSS, and to develop the management part for the 'Groups' module using the Django framework and a MySQL database."
+				</p>
+			</div>
+		</section>
+
+		<section id="contributions" class="reveal">
+			<h2><span class="accent">#</span> Mes Réalisations Personnelles</h2>
+			<p style="margin-bottom: 2rem; color: var(--text-muted);">Pour ce projet de groupe, je me suis occupé personnellement de deux grandes parties :</p>
+			
+			<div class="skills-grid">
+				<div class="skill-card">
+					<h3>Création des pages web (Design)</h3>
+					<p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Je me suis occupé de toute la partie visuelle pour l'utilisateur.</p>
+					<ul style="text-align: left;">
+						<li>Écriture de tout le code HTML et du style CSS pour le site.</li>
+						<li>Création des structures de pages avec Django.</li>
+						<li>Mise en page des formulaires et de la page pour charger les fichiers.</li>
+						<li>Implémentation du CSV pour ajouter des fichier PDF.</li>
+					</ul>
+				</div>
+
+				<div class="skill-card">
+					<h3>Développement de la gestion des Groupes</h3>
+					<p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">J'ai programmé le fonctionnement complet du module pour les groupes.</p>
+					<ul style="text-align: left;">
+						<li>Mise en place des formulaires pour s'assurer que l'utilisateur saisit de bonnes données.</li>
+						<li>Programmation des actions pour afficher la liste, ajouter un groupe, le modifier ou le supprimer (CRUD).</li>
+						<li>Liaison de cette partie avec la base de données MySQL.</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section id="reflexion" class="reveal">
+			<h2><span class="accent">#</span> Réflexion sur mon travail</h2>
+			<div class="card">
+				<h3 class="accent" style="font-size: 1.3rem; margin-bottom: 1rem;">Ma démarche et mes choix visuels</h3>
+				<p style="margin-bottom: 1.5rem;">Pendant cette SAÉ, j'ai beaucoup réfléchi à la simplicité du site. Comme les secrétaires l'utilisent tous les jours, il fallait que l'interface soit très claire. J'ai choisi des listes simples et de bonnes couleurs pour que l'on repère tout de suite si une absence est justifiée ou non.</p>
+				
+				<p style="margin-bottom: 1.5rem;">Pour la page de chargement du fichier des absences, je savais que l'utilisateur pouvait se tromper de fichier ou inverser des colonnes. C'est pour cela que j'ai ajouté un guide d'aide juste au-dessus du bouton de chargement. Cela permet d'éviter les erreurs avant d'envoyer le fichier au serveur.</p>
+				
+				<h3 class="accent" style="font-size: 1.3rem; margin-top: 2rem; margin-bottom: 1rem;">Ce que j'ai appris en programmation</h3>
+				<p>La création de la gestion des Groupes m'a permis de comprendre comment l'application communique avec la base de données MySQL. J'ai appris à coder des actions sécurisées pour enregistrer les formulaires. J'ai aussi dû faire attention à ce que la suppression d'un groupe ne crée pas de bug ou ne supprime pas par erreur des étudiants qui y étaient liés.</p>
+			</div>
+		</section>
+
+		<section id="preuves" class="reveal">
+			<h2><span class="accent">#</span> Éléments de Preuve</h2>
+			<div class="project-grid">
+				
+				<div class="card project-card">
+					<div class="project-header">
+						<h3>Code des pages & Aide CSV</h3>
+						<span class="badge">Partie Visuelle</span>
+					</div>
+					<h4>Une interface simple pour l'utilisateur</h4>
+					<p>La preuve de mon travail sur le visuel se voit dans les fichiers du site et l'ergonomie générale.</p>
+					
+
+					<p><strong>Élément concret :</strong> J'ai créé un tableau d'aide directement sur la page qui indique les colonnes obligatoires pour le fichier CSV, ce qui rend le site plus facile à utiliser.</p>
+					<div class="tags">
+						<span>HTML / CSS</span> <span>Django</span> <span>Interface</span>
+					</div>
+				</div>
+
+				<div class="card project-card">
+					<div class="project-header">
+						<h3>Gestion des Groupes fonctionnelle</h3>
+						<span class="badge">Partie Programmation</span>
+					</div>
+					<h4>Un code propre et sans bug</h4>
+					<p>Voici les extraits de mon code qui prouvent le fonctionnement complet de la gestion des groupes (clique pour zoomer) :</p>
+					
+					<div class="code-gallery">
+						<figure>
+							<img src="images/crud1.png" alt="Code du Modèle" class="preuve-img">
+							<figcaption>1. La base de données</figcaption>
+						</figure>
+						<figure>
+							<img src="images/crud2.png" alt="Code du Formulaire" class="preuve-img">
+							<figcaption>2. Le formulaire de saisie</figcaption>
+						</figure>
+						<figure>
+							<img src="images/crud3.png" alt="Code des URLs" class="preuve-img">
+							<figcaption>3. Les liens des pages (URLs)</figcaption>
+						</figure>
+						<figure>
+							<img src="images/crud4.png" alt="Code des Vues" class="preuve-img">
+							<figcaption>4. La logique (Vues)</figcaption>
+						</figure>
+					</div>
+
+					<p><strong>Élément concret :</strong> Ces éléments travaillent ensemble pour permettre d'ajouter, modifier et supprimer un groupe en toute sécurité.</p>
+					<div class="tags">
+						<span>Python</span> <span>Django</span> <span>MySQL</span>
+					</div>
+				</div>
+
+			</div>
+		</section>
+	</main>
+
+	<div id="image-modal" class="modal">
+		<span class="modal-close">&times;</span>
+		<img class="modal-content" id="modal-img" alt="Zoom code">
+	</div>
+
+	<footer>
+		<p>&copy; 2026 Antoine THOMANN - Portfolio SAÉ 2.03.</p>
+	</footer>
+</body>
+
+</html>
